@@ -34,3 +34,17 @@ The CII scores will enable us to rank top sector movers as shown below:
   <em>Secotors Ranked by CII scores </em>
 </p>
 
+### Top Demographic Factors by Ranking
+Once a certain sector is selected from top movers, a tree-based model will train on the data and calculate feature importance through their Gini Scores. By ranking their normalized feature importance scores, we can see details of how feature values change under a certain selected feature over two periods (in this case: last month vs current month).
+
+
+<p align="center">
+  <img src="/fig/panel.png" style="max-width: 1000px" />
+  <em>The Panel showing Demographic Feature Importance</em>
+</p>
+
+The panel has included selected metric of interest, sector/category selected, details of metric changes, ranked demographic factors and their values over periods.
+
+### Top Demographic Factors by Ranking
+
+
