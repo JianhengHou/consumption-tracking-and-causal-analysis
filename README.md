@@ -11,3 +11,7 @@ The research team in the company owns a datastream of credit card transaction da
 ## Problem Statement
 Given the datastream and all related themes, we would want to leverage this data to identify early signals among various consumption sectors, unfold demographic factors correlated the change the most, and see how much so called constructual and behavioral contribution each segment makes to the change.
 
+<p align="center">
+  <img src="/fig/frame.png" style="max-width: 1000px"/>
+  <em>Pipeline Frame</em>
+</p>
