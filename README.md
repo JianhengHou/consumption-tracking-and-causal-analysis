@@ -40,7 +40,11 @@ Once a certain sector is selected from top movers, a tree-based model will train
 
 <p align="center">
   <img src="/fig/panel.png" style="max-width: 1000px" />
-  <em>Demographic Feature Importance Panel</em>
+  <em>The Panel showing Demographic Feature Importance</em>
 </p>
+
+The panel has included selected metric of interest, sector/category selected, details of metric changes, ranked demographic factors and their values over periods.
+
+### Top Demographic Factors by Ranking
 
 
