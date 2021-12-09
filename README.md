@@ -45,6 +45,18 @@ Once a certain sector is selected from top movers, a tree-based model will train
 
 The panel has included selected metric of interest, sector/category selected, details of metric changes, ranked demographic factors and their values over periods.
 
-### Top Demographic Factors by Ranking
+### Contribution Breakdown of the Metric Change by Cohorts 
+Furthermore, to answer the question “why does the spending-per-person in sports increase by 31%? ”, we can break the change into two aspects:
+- [structural change impact]: The change led by the structural change of consumer cohorts
+- [behavioral change Impact]: The change led by the inherently behavioral change within each cohort
+
+So, when we break down the total change into each segments defined by top 3 important demographic dimensions (can be more, but would be too many segments), we have the details as follow:
+
+<p align="center">
+  <img src="/fig/segments.png" style="max-width: 1000px" />
+  <em> Contribution Breakdown of the Metric Change by Cohorts </em>
+</p>
+
+
 
 
