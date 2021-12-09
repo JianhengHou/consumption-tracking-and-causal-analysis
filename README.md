@@ -30,7 +30,7 @@ Each time series model is built on each metric under individual product category
 The CII scores will enable us to rank top sector movers as shown below:
 
 <p align="center">
-  <img src="/fig/ranking.png" style="max-width: 100px"/>
+  <img src="/fig/ranking.png" style="max-width: 1000px"/ width="100">
   <em>Secotors Ranked by CII scores </em>
 </p>
 
