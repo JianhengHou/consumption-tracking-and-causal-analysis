@@ -47,8 +47,8 @@ The panel has included selected metric of interest, sector/category selected, de
 
 ### Contribution Breakdown of the Metric Change by Cohorts 
 Furthermore, to answer the question “why does the spending-per-person in sports increase by 31%? ”, we can break the change into two aspects:
-- [structural change impact]: The change led by the structural change of consumer cohorts
-- [behavioral change Impact]: The change led by the inherently behavioral change within each cohort
+- Structural change impact: The change led by the structural change of consumer cohorts
+- Behavioral change Impact: The change led by the inherently behavioral change within each cohort
 
 So, when we break down the total change into each segments defined by top 3 important demographic dimensions (can be more, but would be too many segments), we have the details as follow:
 
