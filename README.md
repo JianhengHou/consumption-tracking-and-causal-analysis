@@ -15,3 +15,14 @@ Given the datastream and all related themes, we would want to leverage this data
   <img src="/fig/frame.png" style="max-width: 1000px"/>
   <em>Pipeline Frame</em>
 </p>
+
+## Pipeline breakdown
+### Time Sereis Tracking
+Facebook Prophet Time Series Framework is used to fit the historical data, as it is a user-friendly framework, which takes into account trends, seasonality, and holidays automaticalll. There is a list of metrics of our interest treated as measurement of consumer behaviors, including total spending, average spending, visits, conversion and so on.
+
+Each time series model is built on each metric under individual product category. Fitting the historical data, the model will output a projection for specified time window e.g one month. Based on the actual values for the metric and the projection, we design an indicator that measures the degree of deviation of the actual values away from the projection such that the higher the indicator score is, the more deviate those actual points are. 
+
+<p align="center">
+  <img src="/fig/time_series.png" style="max-width: 1000px"/>
+  <em>E.g Time Sereis Tracking on One of Product Categories</em>
+</p>
