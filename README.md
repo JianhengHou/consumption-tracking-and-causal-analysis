@@ -17,7 +17,14 @@ Given the datastream and all related themes, we would want to leverage this data
 </p>
 
 ## Pipeline breakdown
-### Time Sereis Tracking
+This framework consists of three steps  
+* identify categories where consumption deviates from forecast
+* identify consumer attributes that explain these deviations in consumption
+* identify consumer segments that make the most contribution to the consumption shift
+
+### Consumption Deviation Index(Time Sereis Tracking)
+It continually tracks consumption (monthly $ spent) within each of 33 top-level Amazon categories, and identifies ones where consumption deviates the most from its forecast based on consumption history.
+
 Facebook Prophet Time Series Framework is used to fit the historical data, as it is a user-friendly framework, which takes into account trends, seasonality, and holidays automaticalll. There is a list of metrics of our interest treated as measurement of consumer behaviors, including total spending, average spending, visits, conversion and so on.
 
 Each time series model is built on each metric under individual product category. Fitting the historical data, the model will output a projection for specified time window e.g one month. Based on the actual values for the metric and the projection, we design an indicator (consumer impact index or CII) that measures the degree of deviation of the actual values away from the projection such that the higher the indicator score is, the more deviate those actual points are. 
@@ -34,8 +41,10 @@ The CII scores will enable us to rank top sector movers as shown below:
   <em>Secotors Ranked by CII scores </em>
 </p>
 
-### Top Demographic Factors by Ranking
-Once a certain sector is selected from top movers, a tree-based model will train on the data and calculate feature importance through their Gini Scores. By ranking their normalized feature importance scores, we can see details of how feature values change under a certain selected feature over two periods (in this case: last month vs current month).
+### Explanatory Factors Analysis
+Based on consumer demographic attributes, the mode finds out and rank attributes that dominate the big shift of the consumption metric between two periods, i.e. the targeted month (with unexpected consumption level) v.s a specified month prior (with normal consumption level).
+
+Or more technically, once a certain sector is selected from top movers, a tree-based model will train on the data and calculate feature importance through their Gini Scores. By ranking their normalized feature importance scores, we can see details of how feature values change under a certain selected feature over two periods (in this case: last month vs current month).
 
 
 <p align="center">
@@ -45,18 +54,21 @@ Once a certain sector is selected from top movers, a tree-based model will train
 
 The panel has included selected metric of interest, sector/category selected, details of metric changes, ranked demographic factors and their values over periods.
 
-### Contribution Breakdown of the Metric Change by Cohorts 
-Furthermore, to answer the question “why does the spending-per-person in sports increase by 31%? ”, we can break the change into two aspects:
+### Contribution Breakdown for Consumption Changes
+To answer the question “why does the spending-per-person in sports increase by 31%? ”, we can break the change into two aspects:
 - Structural change impact: The change led by the structural change of consumer cohorts
 - Behavioral change Impact: The change led by the inherently behavioral change within each cohort
 
-So, when we break down the total change into each segments defined by top 3 important demographic dimensions (can be more, but would be too many segments), we have the details as follow:
+Given the important attributes, a detailed view is displayed to present the behavior vs population contribution of individual user segments which are formed by a combination of those attributes. So, when we break down the total change into each segments defined by top 3 important demographic dimensions (can be more, but would be too many segments), we have the details as follow:
 
 <p align="center">
   <img src="fig/segments.png" style="max-width: 1000px" />
   <em> Contribution Breakdown of the Metric Change by Cohorts </em>
 </p>
 
-
-
+## Engineering Infrastructure of the pipeline
+<p align="center">
+  <img src="fig/infrastructure.png" style="max-width: 1000px" />
+  <em> Engineering Details of the Dashboard </em>
+</p>
 
