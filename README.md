@@ -72,3 +72,18 @@ Given the important attributes, a detailed view is displayed to present the beha
   <em> Engineering Details of the Dashboard </em>
 </p>
 
+### Notebook Execution Description:
+#### Sync_Disqo_Data_increment_update: 
+* Preprocess the daily user log data of Disqo to activity log of amazon user in the US [amazon_with_category] by referencing amazon_browsenode and asin_hierarchy_mapping 
+* Preprocess the user demo data of Disqo to a demo data table specifically used for this framework [dashboard_demo_data]
+#### Consumption_Tracking_for_Dashboard_Step1: 
+* Run Facebook’s time series framework to detect outliers of product categories that show unexpected consumption trends and give scores for each category [amazon_cdi_stats]. 
+* Fitted model projection with confidence intervals is also generated for visualization purposes [amazon_cdi_chart].
+#### Consumption_Tracking_for_Dashboard_Step2:
+* Preprocess the table [amazon_with_category] to export name bigram of products interacted by amazon users [bigram_amazon_product_name]
+* Process the the table [amazon_with_category] to generate user transaction entries normalized by all amazon product purchasers per day
+#### Consumption_Tracking_for_Dashboard_Step3:
+* Run models to rank demographic feature importance regarding the contribution to the consumption changes [dashboard_feature_importance]
+
+### More detail of tables, refer the doc [here](https://docs.google.com/document/d/1R1R_VnRbbp7_ek_hcfcpHhDJ0aoywAjFZZ-_Fu2gvPQ/edit).
+
