@@ -37,7 +37,7 @@ Each time series model is built on each metric under individual product category
 The CII scores will enable us to rank top sector movers as shown below:
 
 <p align="center">
-  <img src="fig/ranking.png" style="max-width: 1000px" width="500"/>
+  <img src="fig/look_up_top_movers.png" style="max-width: 1000px" width="500"/>
   <em>Secotors Ranked by CII scores </em>
 </p>
 
@@ -48,7 +48,7 @@ Or more technically, once a certain sector is selected from top movers, a tree-b
 
 
 <p align="center">
-  <img src="fig/panel.png" style="max-width: 1000px" />
+  <img src="fig/feature importance.png" style="max-width: 1000px" />
   <em>The Panel showing Demographic Feature Importance</em>
 </p>
 
@@ -62,13 +62,13 @@ To answer the question “why does the spending-per-person in sports increase by
 Given the important attributes, a detailed view is displayed to present the behavior vs population contribution of individual user segments which are formed by a combination of those attributes. So, when we break down the total change into each segments defined by top 3 important demographic dimensions (can be more, but would be too many segments), we have the details as follow:
 
 <p align="center">
-  <img src="fig/segments.png" style="max-width: 1000px" />
+  <img src="fig/Consumer_Segmentation_Analysis.png" style="max-width: 1000px" />
   <em> Contribution Breakdown of the Metric Change by Cohorts </em>
 </p>
 
 ## Engineering Infrastructure of the pipeline
 <p align="center">
-  <img src="fig/infrastructure.png" style="max-width: 1000px" />
+  <img src="fig/framework.png" style="max-width: 1000px" />
   <em> Engineering Details of the Dashboard </em>
 </p>
 
