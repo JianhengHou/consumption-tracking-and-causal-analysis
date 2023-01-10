@@ -12,7 +12,7 @@ The research team in the company owns a datastream of credit card transaction da
 Given the datastream and all related themes, we would want to leverage this data to identify early signals among various consumption sectors, unfold demographic factors correlated the change the most, and see how much so called constructual and behavioral contribution each segment makes to the change.
 
 <p align="center">
-  <img src="fig/frame.png" style="max-width: 1000px"/>
+  <img src="fig/framework.png" style="max-width: 1000px"/>
   <em>Pipeline Frame</em>
 </p>
 
@@ -37,7 +37,7 @@ Each time series model is built on each metric under individual product category
 The CII scores will enable us to rank top sector movers as shown below:
 
 <p align="center">
-  <img src="fig/look_up_top_movers.png" style="max-width: 1000px" width="500"/>
+  <img src="fig/look_up_top_movers.png" style="max-width: 1000px" width="1000" height="650"/>
   <em>Secotors Ranked by CII scores </em>
 </p>
 
@@ -68,7 +68,7 @@ Given the important attributes, a detailed view is displayed to present the beha
 
 ## Engineering Infrastructure of the pipeline
 <p align="center">
-  <img src="fig/framework.png" style="max-width: 1000px" />
+  <img src="fig/infrastructure.png" style="max-width: 1000px" />
   <em> Engineering Details of the Dashboard </em>
 </p>
 
@@ -76,6 +76,8 @@ Given the important attributes, a detailed view is displayed to present the beha
 #### Sync_Disqo_Data_increment_update: 
 * Preprocess the daily user log data of Disqo to activity log of amazon user in the US [amazon_with_category] by referencing amazon_browsenode and asin_hierarchy_mapping 
 * Preprocess the user demo data of Disqo to a demo data table specifically used for this framework [dashboard_demo_data]
+#### Mapping_Pipeline:
+* Process retailer data based on the pre-defined categorization dictionary. Currently retailer data include amazon, walmart, costco, and target. [retailers_us_with_levels]
 #### Consumption_Tracking_for_Dashboard_Step1: 
 * Run Facebook’s time series framework to detect outliers of product categories that show unexpected consumption trends and give scores for each category [amazon_cdi_stats]. 
 * Fitted model projection with confidence intervals is also generated for visualization purposes [amazon_cdi_chart].
