@@ -12,7 +12,7 @@ The research team in the company owns a datastream of credit card transaction da
 Given the datastream and all related themes, we would want to leverage this data to identify early signals among various consumption sectors, unfold demographic factors correlated the change the most, and see how much so called constructual and behavioral contribution each segment makes to the change.
 
 <p align="center">
-  <img src="fig/frame.png" style="max-width: 1000px"/>
+  <img src="fig/framework.png" style="max-width: 1000px"/>
   <em>Pipeline Frame</em>
 </p>
 
@@ -37,7 +37,7 @@ Each time series model is built on each metric under individual product category
 The CII scores will enable us to rank top sector movers as shown below:
 
 <p align="center">
-  <img src="fig/ranking.png" style="max-width: 1000px" width="500"/>
+  <img src="fig/look_up_top_movers.png" style="max-width: 1000px" width="1000" height="650"/>
   <em>Secotors Ranked by CII scores </em>
 </p>
 
@@ -48,7 +48,7 @@ Or more technically, once a certain sector is selected from top movers, a tree-b
 
 
 <p align="center">
-  <img src="fig/panel.png" style="max-width: 1000px" />
+  <img src="fig/feature importance.png" style="max-width: 1000px" />
   <em>The Panel showing Demographic Feature Importance</em>
 </p>
 
@@ -62,7 +62,7 @@ To answer the question “why does the spending-per-person in sports increase by
 Given the important attributes, a detailed view is displayed to present the behavior vs population contribution of individual user segments which are formed by a combination of those attributes. So, when we break down the total change into each segments defined by top 3 important demographic dimensions (can be more, but would be too many segments), we have the details as follow:
 
 <p align="center">
-  <img src="fig/segments.png" style="max-width: 1000px" />
+  <img src="fig/Consumer_Segmentation_Analysis.png" style="max-width: 1000px" />
   <em> Contribution Breakdown of the Metric Change by Cohorts </em>
 </p>
 
@@ -76,6 +76,8 @@ Given the important attributes, a detailed view is displayed to present the beha
 #### Sync_Disqo_Data_increment_update: 
 * Preprocess the daily user log data of Disqo to activity log of amazon user in the US [amazon_with_category] by referencing amazon_browsenode and asin_hierarchy_mapping 
 * Preprocess the user demo data of Disqo to a demo data table specifically used for this framework [dashboard_demo_data]
+#### Mapping_Pipeline:
+* Process retailer data based on the pre-defined categorization dictionary. Currently retailer data include amazon, walmart, costco, and target. [retailers_us_with_levels]
 #### Consumption_Tracking_for_Dashboard_Step1: 
 * Run Facebook’s time series framework to detect outliers of product categories that show unexpected consumption trends and give scores for each category [amazon_cdi_stats]. 
 * Fitted model projection with confidence intervals is also generated for visualization purposes [amazon_cdi_chart].
